@@ -1,0 +1,6 @@
+__pycache__
+todo.db
+.git
+scheduler.lock
+migrations
+.env-example

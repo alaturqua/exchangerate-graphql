@@ -1,0 +1,38 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type ExchangeRate {
+    id: ID!
+    base: String!
+    rate: Float!
+    currency_code: String!
+    date: String!
+}
+
+type ExchangeRateResult {
+    success: Boolean!
+    errors: [String]
+    exchangerate: ExchangeRate
+}
+
+type ExchangeRatesResult {
+    success: Boolean!
+    errors: [String]
+    exchangerates: [ExchangeRate]
+}
+
+type Query {
+    exchangerates: ExchangeRatesResult!
+    exchangerate(id: ID!): ExchangeRateResult
+}
+
+type Mutation {
+    create_exchangerate(base: String!, rate: Float!, currency_code: String!, date: String!): ExchangeRateResult!
+}
+
+type DeleteExchangeRate {
+    success: Boolean!
+    errors: [String]
+}
