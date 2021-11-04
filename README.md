@@ -4,7 +4,7 @@
 ## Get Code
 
 ```
-git pull https://github.com/alaturqua/exchangerate-graphql.git
+git clone https://github.com/alaturqua/exchangerate-graphql.git
 ```
 ## Create .env file with following content and set your creds for postgres
 ```
